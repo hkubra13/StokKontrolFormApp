@@ -1,6 +1,6 @@
 ﻿namespace StokKontrolFormApp
 {
-    partial class urunAlis_combo
+    partial class AlisForm
     {
         /// <summary>
         /// Required designer variable.
@@ -191,7 +191,7 @@
             label6.TabIndex = 33;
             label6.Text = "Atölye:";
             // 
-            // urunAlis_combo
+            // AlisForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -213,7 +213,7 @@
             Controls.Add(alisFiyat_txt);
             Controls.Add(label1);
             Controls.Add(alisKod_txt);
-            Name = "urunAlis_combo";
+            Name = "AlisForm";
             Text = "AlisForm";
             ((System.ComponentModel.ISupportInitialize)alisDataGrid).EndInit();
             ResumeLayout(false);

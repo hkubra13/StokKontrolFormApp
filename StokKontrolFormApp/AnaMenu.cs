@@ -45,7 +45,7 @@ namespace StokKontrolFormApp
 
         private void alis_Click(object sender, EventArgs e)
         {
-            urunAlis_combo alisForm = new urunAlis_combo();
+            AlisForm alisForm = new AlisForm();
             alisForm.Show();
         }
     }

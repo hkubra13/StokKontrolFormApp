@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StokKontrolFormApp
 {
-    public partial class urunAlis_combo : Form
+    public partial class AlisForm : Form
     {
-        public urunAlis_combo()
+        public AlisForm()
         {
             InitializeComponent();
         }
