@@ -217,6 +217,7 @@
             Controls.Add(urunKod_txt);
             Name = "UrunForm";
             Text = "UrunForm";
+            Load += UrunForm_Load;
             ((System.ComponentModel.ISupportInitialize)urunDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
