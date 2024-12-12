@@ -1,8 +1,8 @@
 namespace StokKontrolFormApp
 {
-    public partial class Form1 : Form
+    public partial class AnaMenu : Form
     {
-        public Form1()
+        public AnaMenu()
         {
             InitializeComponent();
         }

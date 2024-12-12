@@ -12,10 +12,17 @@ namespace StokKontrolFormApp
 {
     public partial class UrunForm : Form
     {
+        UrunDAO urunDAO = new UrunDAO();
         public UrunForm()
         {
             InitializeComponent();
         }
 
+        private void urunGoster_btn_Click(object sender, EventArgs e)
+        {
+            BindingSource urunBindingSource = new BindingSource();
+            urunBindingSource.DataSource = urunDAO.TumUrunler();
+            urunDataGrid.DataSource = urunBindingSource;
+        }
     }
 }

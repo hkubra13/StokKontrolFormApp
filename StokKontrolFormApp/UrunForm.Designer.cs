@@ -43,6 +43,7 @@
             urunGuncelle_btn = new Button();
             urunSil_btn = new Button();
             urunAra_btn = new Button();
+            urunGoster_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)urunDataGrid).BeginInit();
             SuspendLayout();
             // 
@@ -172,11 +173,22 @@
             urunAra_btn.Text = "Ara";
             urunAra_btn.UseVisualStyleBackColor = true;
             // 
+            // urunGoster_btn
+            // 
+            urunGoster_btn.Location = new Point(357, 10);
+            urunGoster_btn.Name = "urunGoster_btn";
+            urunGoster_btn.Size = new Size(94, 29);
+            urunGoster_btn.TabIndex = 16;
+            urunGoster_btn.Text = "Göster";
+            urunGoster_btn.UseVisualStyleBackColor = true;
+            urunGoster_btn.Click += urunGoster_btn_Click;
+            // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(934, 425);
+            Controls.Add(urunGoster_btn);
             Controls.Add(urunAra_btn);
             Controls.Add(urunSil_btn);
             Controls.Add(urunGuncelle_btn);
@@ -216,5 +228,6 @@
         private Button urunGuncelle_btn;
         private Button urunSil_btn;
         private Button urunAra_btn;
+        private Button urunGoster_btn;
     }
 }

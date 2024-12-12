@@ -1,6 +1,6 @@
 ﻿namespace StokKontrolFormApp
 {
-    partial class Form1
+    partial class AnaMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -107,7 +107,7 @@
             calisan.UseVisualStyleBackColor = true;
             calisan.Click += calisan_Click;
             // 
-            // Form1
+            // AnaMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -119,7 +119,7 @@
             Controls.Add(satis);
             Controls.Add(atolye);
             Controls.Add(urun);
-            Name = "Form1";
+            Name = "AnaMenu";
             Text = "AnaMenu";
             ResumeLayout(false);
         }
