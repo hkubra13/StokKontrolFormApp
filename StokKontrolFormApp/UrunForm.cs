@@ -24,5 +24,12 @@ namespace StokKontrolFormApp
             urunBindingSource.DataSource = urunDAO.TumUrunler();
             urunDataGrid.DataSource = urunBindingSource;
         }
+
+        private void urunAra_btn_Click(object sender, EventArgs e)
+        {
+            BindingSource urunBindingSource = new BindingSource();
+            urunBindingSource.DataSource = urunDAO.UrunArama(urunAra_txt.Text);
+            urunDataGrid.DataSource = urunBindingSource;
+        }
     }
 }

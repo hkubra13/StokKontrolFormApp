@@ -44,6 +44,7 @@
             urunSil_btn = new Button();
             urunAra_btn = new Button();
             urunGoster_btn = new Button();
+            urunAra_txt = new TextBox();
             ((System.ComponentModel.ISupportInitialize)urunDataGrid).BeginInit();
             SuspendLayout();
             // 
@@ -166,28 +167,37 @@
             // 
             // urunAra_btn
             // 
-            urunAra_btn.Location = new Point(758, 346);
+            urunAra_btn.Location = new Point(758, 10);
             urunAra_btn.Name = "urunAra_btn";
             urunAra_btn.Size = new Size(116, 29);
             urunAra_btn.TabIndex = 15;
             urunAra_btn.Text = "Ara";
             urunAra_btn.UseVisualStyleBackColor = true;
+            urunAra_btn.Click += urunAra_btn_Click;
             // 
             // urunGoster_btn
             // 
-            urunGoster_btn.Location = new Point(357, 10);
+            urunGoster_btn.Location = new Point(758, 346);
             urunGoster_btn.Name = "urunGoster_btn";
-            urunGoster_btn.Size = new Size(94, 29);
+            urunGoster_btn.Size = new Size(116, 29);
             urunGoster_btn.TabIndex = 16;
             urunGoster_btn.Text = "Göster";
             urunGoster_btn.UseVisualStyleBackColor = true;
             urunGoster_btn.Click += urunGoster_btn_Click;
+            // 
+            // urunAra_txt
+            // 
+            urunAra_txt.Location = new Point(500, 12);
+            urunAra_txt.Name = "urunAra_txt";
+            urunAra_txt.Size = new Size(252, 27);
+            urunAra_txt.TabIndex = 17;
             // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(934, 425);
+            Controls.Add(urunAra_txt);
             Controls.Add(urunGoster_btn);
             Controls.Add(urunAra_btn);
             Controls.Add(urunSil_btn);
@@ -229,5 +239,6 @@
         private Button urunSil_btn;
         private Button urunAra_btn;
         private Button urunGoster_btn;
+        private TextBox urunAra_txt;
     }
 }
