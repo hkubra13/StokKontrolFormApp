@@ -36,8 +36,7 @@
             urunStok_txt = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
-            departmanUrun_combo = new ComboBox();
+            seriNo_txt = new TextBox();
             urunDataGrid = new DataGridView();
             urunEkle_btn = new Button();
             urunGuncelle_btn = new Button();
@@ -45,6 +44,7 @@
             urunAra_btn = new Button();
             urunGoster_btn = new Button();
             urunAra_txt = new TextBox();
+            departmanUrun_combo = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)urunDataGrid).BeginInit();
             SuspendLayout();
             // 
@@ -108,26 +108,18 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(47, 261);
+            label5.Location = new Point(45, 261);
             label5.Name = "label5";
-            label5.Size = new Size(59, 20);
+            label5.Size = new Size(61, 20);
             label5.TabIndex = 9;
-            label5.Text = "Barkod:";
+            label5.Text = "Seri No:";
             // 
-            // textBox2
+            // seriNo_txt
             // 
-            textBox2.Location = new Point(112, 258);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(151, 27);
-            textBox2.TabIndex = 8;
-            // 
-            // departmanUrun_combo
-            // 
-            departmanUrun_combo.FormattingEnabled = true;
-            departmanUrun_combo.Location = new Point(112, 204);
-            departmanUrun_combo.Name = "departmanUrun_combo";
-            departmanUrun_combo.Size = new Size(151, 28);
-            departmanUrun_combo.TabIndex = 10;
+            seriNo_txt.Location = new Point(112, 258);
+            seriNo_txt.Name = "seriNo_txt";
+            seriNo_txt.Size = new Size(151, 27);
+            seriNo_txt.TabIndex = 8;
             // 
             // urunDataGrid
             // 
@@ -146,6 +138,7 @@
             urunEkle_btn.TabIndex = 12;
             urunEkle_btn.Text = "Ekle";
             urunEkle_btn.UseVisualStyleBackColor = true;
+            urunEkle_btn.Click += urunEkle_btn_Click;
             // 
             // urunGuncelle_btn
             // 
@@ -192,11 +185,20 @@
             urunAra_txt.Size = new Size(252, 27);
             urunAra_txt.TabIndex = 17;
             // 
+            // departmanUrun_combo
+            // 
+            departmanUrun_combo.FormattingEnabled = true;
+            departmanUrun_combo.Location = new Point(112, 204);
+            departmanUrun_combo.Name = "departmanUrun_combo";
+            departmanUrun_combo.Size = new Size(151, 28);
+            departmanUrun_combo.TabIndex = 18;
+            // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(934, 425);
+            Controls.Add(departmanUrun_combo);
             Controls.Add(urunAra_txt);
             Controls.Add(urunGoster_btn);
             Controls.Add(urunAra_btn);
@@ -204,9 +206,8 @@
             Controls.Add(urunGuncelle_btn);
             Controls.Add(urunEkle_btn);
             Controls.Add(urunDataGrid);
-            Controls.Add(departmanUrun_combo);
             Controls.Add(label5);
-            Controls.Add(textBox2);
+            Controls.Add(seriNo_txt);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(urunStok_txt);
@@ -231,8 +232,7 @@
         private TextBox urunStok_txt;
         private Label label4;
         private Label label5;
-        private TextBox textBox2;
-        private ComboBox departmanUrun_combo;
+        private TextBox seriNo_txt;
         private DataGridView urunDataGrid;
         private Button urunEkle_btn;
         private Button urunGuncelle_btn;
@@ -240,5 +240,6 @@
         private Button urunAra_btn;
         private Button urunGoster_btn;
         private TextBox urunAra_txt;
+        private ComboBox departmanUrun_combo;
     }
 }

@@ -47,8 +47,8 @@ namespace StokKontrolFormApp
 
             string urunAramaTerimi = "%" + aramaTerimi + "%";
 
-            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId WHERE urunAd LIKE @Urun", connection);
-            command.Parameters.AddWithValue("@Urun", urunAramaTerimi);
+            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId WHERE urunAd LIKE @urunAd", connection);
+            command.Parameters.AddWithValue("@urunAd", urunAramaTerimi);
 
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -66,6 +66,23 @@ namespace StokKontrolFormApp
             }
             connection.Close();
             return urunListe;
+        }
+
+        public int UrunEkle(Urun urun)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("INSERT INTO Urun (urunId, urunAd, departmanId, seriId, urunStok) VALUES (@urunId, @urunAd, @departmanId, @seriId, @urunStok)", connection);
+            command.Parameters.AddWithValue("@urunId", urun.urunId);
+            command.Parameters.AddWithValue("@urunAd", urun.urunAd);
+            command.Parameters.AddWithValue("@departmanId", urun.departmanId);
+            command.Parameters.AddWithValue("@seriId", urun.seriId);
+            command.Parameters.AddWithValue("@urunStok", urun.urunStok);
+            int yeniUrun = command.ExecuteNonQuery();
+
+            connection.Close();
+            return yeniUrun;
         }
 
     }

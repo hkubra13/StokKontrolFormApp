@@ -31,5 +31,15 @@ namespace StokKontrolFormApp
             urunBindingSource.DataSource = urunDAO.UrunArama(urunAra_txt.Text);
             urunDataGrid.DataSource = urunBindingSource;
         }
+
+        private void urunEkle_btn_Click(object sender, EventArgs e)
+        {
+            Urun urun = new Urun()
+            {
+                urunId = Convert.ToInt32(urunKod_txt.Text),
+                urunAd = urunAd_txt.Text,
+                departmanId =
+            };
+        }
     }
 }
