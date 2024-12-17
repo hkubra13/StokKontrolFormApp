@@ -45,6 +45,7 @@
             urunGoster_btn = new Button();
             urunAra_txt = new TextBox();
             departmanUrun_combo = new ComboBox();
+            urunTemizle_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)urunDataGrid).BeginInit();
             SuspendLayout();
             // 
@@ -129,6 +130,7 @@
             urunDataGrid.RowHeadersWidth = 51;
             urunDataGrid.Size = new Size(517, 240);
             urunDataGrid.TabIndex = 11;
+            urunDataGrid.RowHeaderMouseClick += urunDataGrid_RowHeaderMouseClick;
             // 
             // urunEkle_btn
             // 
@@ -148,6 +150,7 @@
             urunGuncelle_btn.TabIndex = 13;
             urunGuncelle_btn.Text = "Güncelle";
             urunGuncelle_btn.UseVisualStyleBackColor = true;
+            urunGuncelle_btn.Click += urunGuncelle_btn_Click;
             // 
             // urunSil_btn
             // 
@@ -157,6 +160,7 @@
             urunSil_btn.TabIndex = 14;
             urunSil_btn.Text = "Sil";
             urunSil_btn.UseVisualStyleBackColor = true;
+            urunSil_btn.Click += urunSil_btn_Click;
             // 
             // urunAra_btn
             // 
@@ -193,11 +197,22 @@
             departmanUrun_combo.Size = new Size(151, 28);
             departmanUrun_combo.TabIndex = 18;
             // 
+            // urunTemizle_btn
+            // 
+            urunTemizle_btn.Location = new Point(147, 311);
+            urunTemizle_btn.Name = "urunTemizle_btn";
+            urunTemizle_btn.Size = new Size(116, 29);
+            urunTemizle_btn.TabIndex = 19;
+            urunTemizle_btn.Text = "Temizle";
+            urunTemizle_btn.UseVisualStyleBackColor = true;
+            urunTemizle_btn.Click += urunTemizle_btn_Click;
+            // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(934, 425);
+            Controls.Add(urunTemizle_btn);
             Controls.Add(departmanUrun_combo);
             Controls.Add(urunAra_txt);
             Controls.Add(urunGoster_btn);
@@ -242,5 +257,6 @@
         private Button urunGoster_btn;
         private TextBox urunAra_txt;
         private ComboBox departmanUrun_combo;
+        private Button urunTemizle_btn;
     }
 }

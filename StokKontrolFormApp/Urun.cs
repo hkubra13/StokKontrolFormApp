@@ -14,8 +14,8 @@ namespace StokKontrolFormApp
         public string departmanAd { get; set; }
 
 
-        public int departmanId { get; set; }
         public string seriId { get; set; }
+        public int departmanId { get; set; }
 
     }
 }

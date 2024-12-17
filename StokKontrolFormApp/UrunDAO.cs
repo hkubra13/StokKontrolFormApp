@@ -18,7 +18,7 @@ namespace StokKontrolFormApp
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
-            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId", connection);
+            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId, Departman.departmanId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId", connection);
 
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -31,6 +31,7 @@ namespace StokKontrolFormApp
                     urun.urunStok = !reader.IsDBNull(2) ? reader.GetInt32(2) : 0;
                     urun.departmanAd = !reader.IsDBNull(3) ? reader.GetString(3) : "Bilinmiyor";
                     urun.seriId = !reader.IsDBNull(4) ? reader.GetString(4) : "Bilinmiyor";
+                    urun.departmanId = !reader.IsDBNull(5) ? reader.GetInt32(5) : 0;
                     urunListe.Add(urun);
                 }
             }
@@ -47,7 +48,7 @@ namespace StokKontrolFormApp
 
             string urunAramaTerimi = "%" + aramaTerimi + "%";
 
-            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId WHERE urunAd LIKE @urunAd", connection);
+            SqlCommand command = new SqlCommand("SELECT urunId, urunAd, urunStok, departmanAd, seriId, Departman.departmanId FROM Urun LEFT JOIN Departman ON Urun.departmanId = Departman.departmanId WHERE urunAd LIKE @urunAd", connection);
             command.Parameters.AddWithValue("@urunAd", urunAramaTerimi);
 
             using (SqlDataReader reader = command.ExecuteReader())
@@ -61,6 +62,7 @@ namespace StokKontrolFormApp
                     urun.urunStok = !reader.IsDBNull(2) ? reader.GetInt32(2) : 0;
                     urun.departmanAd = !reader.IsDBNull(3) ? reader.GetString(3) : "Bilinmiyor";
                     urun.seriId = !reader.IsDBNull(4) ? reader.GetString(4) : "Bilinmiyor";
+                    urun.departmanId = !reader.IsDBNull(5) ? reader.GetInt32(5) : 0;
                     urunListe.Add(urun);
                 }
             }
@@ -85,5 +87,34 @@ namespace StokKontrolFormApp
             return yeniUrun;
         }
 
+        public int UrunGuncelle (Urun urun)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE Urun SET urunAd = @urunAd, departmanId = @departmanId, seriId = @seriId, urunStok = @urunStok WHERE urunId = @urunId", connection);
+            command.Parameters.AddWithValue("@urunId", urun.urunId);
+            command.Parameters.AddWithValue("@urunAd", urun.urunAd);
+            command.Parameters.AddWithValue("@departmanId", urun.departmanId);
+            command.Parameters.AddWithValue("@seriId", urun.seriId);
+            command.Parameters.AddWithValue("@urunStok", urun.urunStok);
+            int guncelUrun = command.ExecuteNonQuery();
+
+            connection.Close();
+            return guncelUrun;
+        }
+
+        public int UrunSil (int urunId)
+        {
+            SqlConnection connection = new SqlConnection (connectionString);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("DELETE FROM Urun WHERE urunId = @urunId", connection);
+            command.Parameters.AddWithValue("@urunId", urunId);
+            int sonuc = command.ExecuteNonQuery();
+
+            connection.Close();
+            return sonuc;
+        }
     }
 }
