@@ -43,7 +43,7 @@
             alisKod_txt = new TextBox();
             alisTarih_picker = new DateTimePicker();
             alisUrun_combo = new ComboBox();
-            alisAtolye_combo = new ComboBox();
+            alisTedarikci_combo = new ComboBox();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)alisDataGrid).BeginInit();
             SuspendLayout();
@@ -56,6 +56,7 @@
             alisAra_btn.TabIndex = 30;
             alisAra_btn.Text = "Ara";
             alisAra_btn.UseVisualStyleBackColor = true;
+            alisAra_btn.Click += alisAra_btn_Click;
             // 
             // alisSil_btn
             // 
@@ -65,6 +66,7 @@
             alisSil_btn.TabIndex = 29;
             alisSil_btn.Text = "Sil";
             alisSil_btn.UseVisualStyleBackColor = true;
+            alisSil_btn.Click += alisSil_btn_Click;
             // 
             // alisGuncelle_btn
             // 
@@ -74,6 +76,7 @@
             alisGuncelle_btn.TabIndex = 28;
             alisGuncelle_btn.Text = "Güncelle";
             alisGuncelle_btn.UseVisualStyleBackColor = true;
+            alisGuncelle_btn.Click += alisGuncelle_btn_Click;
             // 
             // alisEkle_btn
             // 
@@ -83,6 +86,7 @@
             alisEkle_btn.TabIndex = 27;
             alisEkle_btn.Text = "Ekle";
             alisEkle_btn.UseVisualStyleBackColor = true;
+            alisEkle_btn.Click += alisEkle_btn_Click;
             // 
             // alisDataGrid
             // 
@@ -174,29 +178,29 @@
             alisUrun_combo.Size = new Size(151, 28);
             alisUrun_combo.TabIndex = 32;
             // 
-            // alisAtolye_combo
+            // alisTedarikci_combo
             // 
-            alisAtolye_combo.FormattingEnabled = true;
-            alisAtolye_combo.Location = new Point(193, 350);
-            alisAtolye_combo.Name = "alisAtolye_combo";
-            alisAtolye_combo.Size = new Size(151, 28);
-            alisAtolye_combo.TabIndex = 34;
+            alisTedarikci_combo.FormattingEnabled = true;
+            alisTedarikci_combo.Location = new Point(193, 350);
+            alisTedarikci_combo.Name = "alisTedarikci_combo";
+            alisTedarikci_combo.Size = new Size(151, 28);
+            alisTedarikci_combo.TabIndex = 34;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(132, 353);
+            label6.Location = new Point(116, 354);
             label6.Name = "label6";
-            label6.Size = new Size(55, 20);
+            label6.Size = new Size(71, 20);
             label6.TabIndex = 33;
-            label6.Text = "Atölye:";
+            label6.Text = "Tedarikçi:";
             // 
             // AlisForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1049, 561);
-            Controls.Add(alisAtolye_combo);
+            Controls.Add(alisTedarikci_combo);
             Controls.Add(label6);
             Controls.Add(alisUrun_combo);
             Controls.Add(alisTarih_picker);
@@ -215,6 +219,7 @@
             Controls.Add(alisKod_txt);
             Name = "AlisForm";
             Text = "AlisForm";
+            Load += AlisForm_Load;
             ((System.ComponentModel.ISupportInitialize)alisDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -237,7 +242,7 @@
         private TextBox alisKod_txt;
         private DateTimePicker alisTarih_picker;
         private ComboBox alisUrun_combo;
-        private ComboBox alisAtolye_combo;
+        private ComboBox alisTedarikci_combo;
         private Label label6;
     }
 }

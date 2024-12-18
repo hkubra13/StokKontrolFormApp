@@ -178,7 +178,7 @@
             urunGoster_btn.Name = "urunGoster_btn";
             urunGoster_btn.Size = new Size(116, 29);
             urunGoster_btn.TabIndex = 16;
-            urunGoster_btn.Text = "Göster";
+            urunGoster_btn.Text = "Yenile";
             urunGoster_btn.UseVisualStyleBackColor = true;
             urunGoster_btn.Click += urunGoster_btn_Click;
             // 

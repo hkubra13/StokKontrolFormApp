@@ -34,9 +34,10 @@
             departmanEkle_btn = new Button();
             departmanDataGrid = new DataGridView();
             label2 = new Label();
-            calisanAd_txt = new TextBox();
+            departmanAd_txt = new TextBox();
             label1 = new Label();
-            calisanKod_txt = new TextBox();
+            departmanKod_txt = new TextBox();
+            yenile_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)departmanDataGrid).BeginInit();
             SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             departmanAra_btn.TabIndex = 43;
             departmanAra_btn.Text = "Ara";
             departmanAra_btn.UseVisualStyleBackColor = true;
+            departmanAra_btn.Click += departmanAra_btn_Click;
             // 
             // departmanSil_btn
             // 
@@ -57,6 +59,7 @@
             departmanSil_btn.TabIndex = 42;
             departmanSil_btn.Text = "Sil";
             departmanSil_btn.UseVisualStyleBackColor = true;
+            departmanSil_btn.Click += departmanSil_btn_Click;
             // 
             // departmanGuncelle_btn
             // 
@@ -66,6 +69,7 @@
             departmanGuncelle_btn.TabIndex = 41;
             departmanGuncelle_btn.Text = "Güncelle";
             departmanGuncelle_btn.UseVisualStyleBackColor = true;
+            departmanGuncelle_btn.Click += departmanGuncelle_btn_Click;
             // 
             // departmanEkle_btn
             // 
@@ -75,6 +79,7 @@
             departmanEkle_btn.TabIndex = 40;
             departmanEkle_btn.Text = "Ekle";
             departmanEkle_btn.UseVisualStyleBackColor = true;
+            departmanEkle_btn.Click += departmanEkle_btn_Click;
             // 
             // departmanDataGrid
             // 
@@ -94,12 +99,12 @@
             label2.TabIndex = 34;
             label2.Text = "Departman Ad:";
             // 
-            // calisanAd_txt
+            // departmanAd_txt
             // 
-            calisanAd_txt.Location = new Point(196, 162);
-            calisanAd_txt.Name = "calisanAd_txt";
-            calisanAd_txt.Size = new Size(151, 27);
-            calisanAd_txt.TabIndex = 33;
+            departmanAd_txt.Location = new Point(196, 162);
+            departmanAd_txt.Name = "departmanAd_txt";
+            departmanAd_txt.Size = new Size(151, 27);
+            departmanAd_txt.TabIndex = 33;
             // 
             // label1
             // 
@@ -110,29 +115,41 @@
             label1.TabIndex = 32;
             label1.Text = "Departman Kodu:";
             // 
-            // calisanKod_txt
+            // departmanKod_txt
             // 
-            calisanKod_txt.Location = new Point(196, 105);
-            calisanKod_txt.Name = "calisanKod_txt";
-            calisanKod_txt.Size = new Size(151, 27);
-            calisanKod_txt.TabIndex = 31;
+            departmanKod_txt.Location = new Point(196, 105);
+            departmanKod_txt.Name = "departmanKod_txt";
+            departmanKod_txt.Size = new Size(151, 27);
+            departmanKod_txt.TabIndex = 31;
+            // 
+            // yenile_btn
+            // 
+            yenile_btn.Location = new Point(441, 73);
+            yenile_btn.Name = "yenile_btn";
+            yenile_btn.Size = new Size(94, 29);
+            yenile_btn.TabIndex = 44;
+            yenile_btn.Text = "Yenile";
+            yenile_btn.UseVisualStyleBackColor = true;
+            yenile_btn.Click += yenile_btn_Click;
             // 
             // DepartmanForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 543);
+            Controls.Add(yenile_btn);
             Controls.Add(departmanAra_btn);
             Controls.Add(departmanSil_btn);
             Controls.Add(departmanGuncelle_btn);
             Controls.Add(departmanEkle_btn);
             Controls.Add(departmanDataGrid);
             Controls.Add(label2);
-            Controls.Add(calisanAd_txt);
+            Controls.Add(departmanAd_txt);
             Controls.Add(label1);
-            Controls.Add(calisanKod_txt);
+            Controls.Add(departmanKod_txt);
             Name = "DepartmanForm";
             Text = "DepartmanForm";
+            Load += DepartmanForm_Load;
             ((System.ComponentModel.ISupportInitialize)departmanDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -146,8 +163,9 @@
         private Button departmanEkle_btn;
         private DataGridView departmanDataGrid;
         private Label label2;
-        private TextBox calisanAd_txt;
+        private TextBox departmanAd_txt;
         private Label label1;
-        private TextBox calisanKod_txt;
+        private TextBox departmanKod_txt;
+        private Button yenile_btn;
     }
 }

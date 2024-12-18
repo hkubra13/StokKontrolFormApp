@@ -14,6 +14,7 @@ namespace StokKontrolFormApp
     {
         UrunDAO urunDAO = new UrunDAO();
         DepartmanDAO departmanDAO = new DepartmanDAO();
+
         public UrunForm()
         {
             InitializeComponent();

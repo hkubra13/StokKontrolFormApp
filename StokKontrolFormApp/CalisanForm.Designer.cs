@@ -52,6 +52,7 @@
             calisanAra_btn.TabIndex = 30;
             calisanAra_btn.Text = "Ara";
             calisanAra_btn.UseVisualStyleBackColor = true;
+            calisanAra_btn.Click += calisanAra_btn_Click;
             // 
             // calisanSil_btn
             // 
@@ -61,6 +62,7 @@
             calisanSil_btn.TabIndex = 29;
             calisanSil_btn.Text = "Sil";
             calisanSil_btn.UseVisualStyleBackColor = true;
+            calisanSil_btn.Click += calisanSil_btn_Click;
             // 
             // calisanGuncelle_btn
             // 
@@ -70,6 +72,7 @@
             calisanGuncelle_btn.TabIndex = 28;
             calisanGuncelle_btn.Text = "Güncelle";
             calisanGuncelle_btn.UseVisualStyleBackColor = true;
+            calisanGuncelle_btn.Click += calisanGuncelle_btn_Click;
             // 
             // calisanEkle_btn
             // 
@@ -79,6 +82,7 @@
             calisanEkle_btn.TabIndex = 27;
             calisanEkle_btn.Text = "Ekle";
             calisanEkle_btn.UseVisualStyleBackColor = true;
+            calisanEkle_btn.Click += calisanEkle_btn_Click;
             // 
             // calisanDataGrid
             // 
@@ -88,6 +92,7 @@
             calisanDataGrid.RowHeadersWidth = 51;
             calisanDataGrid.Size = new Size(517, 240);
             calisanDataGrid.TabIndex = 26;
+            calisanDataGrid.CellContentClick += calisanDataGrid_CellContentClick;
             // 
             // departmanCalisan_combo
             // 
@@ -174,6 +179,7 @@
             Controls.Add(calisanKod_txt);
             Name = "CalisanForm";
             Text = "CalisanForm";
+            Load += CalisanForm_Load;
             ((System.ComponentModel.ISupportInitialize)calisanDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();

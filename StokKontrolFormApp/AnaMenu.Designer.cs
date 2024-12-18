@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             urun = new Button();
-            atolye = new Button();
+            tedarikci = new Button();
             satis = new Button();
             departman = new Button();
-            barkod = new Button();
+            urunOzellikleri = new Button();
             alis = new Button();
             calisan = new Button();
             SuspendLayout();
@@ -47,15 +47,15 @@
             urun.UseVisualStyleBackColor = true;
             urun.Click += urun_Click;
             // 
-            // atolye
+            // tedarikci
             // 
-            atolye.Location = new Point(69, 183);
-            atolye.Name = "atolye";
-            atolye.Size = new Size(249, 90);
-            atolye.TabIndex = 1;
-            atolye.Text = "Atöyle";
-            atolye.UseVisualStyleBackColor = true;
-            atolye.Click += atolye_Click;
+            tedarikci.Location = new Point(69, 183);
+            tedarikci.Name = "tedarikci";
+            tedarikci.Size = new Size(249, 90);
+            tedarikci.TabIndex = 1;
+            tedarikci.Text = "Tedarikçi";
+            tedarikci.UseVisualStyleBackColor = true;
+            tedarikci.Click += atolye_Click;
             // 
             // satis
             // 
@@ -77,15 +77,15 @@
             departman.UseVisualStyleBackColor = true;
             departman.Click += departman_Click;
             // 
-            // barkod
+            // urunOzellikleri
             // 
-            barkod.Location = new Point(383, 47);
-            barkod.Name = "barkod";
-            barkod.Size = new Size(249, 90);
-            barkod.TabIndex = 7;
-            barkod.Text = "Barkod";
-            barkod.UseVisualStyleBackColor = true;
-            barkod.Click += barkod_Click;
+            urunOzellikleri.Location = new Point(383, 47);
+            urunOzellikleri.Name = "urunOzellikleri";
+            urunOzellikleri.Size = new Size(249, 90);
+            urunOzellikleri.TabIndex = 7;
+            urunOzellikleri.Text = "Ürün Özellikleri";
+            urunOzellikleri.UseVisualStyleBackColor = true;
+            urunOzellikleri.Click += barkod_Click;
             // 
             // alis
             // 
@@ -114,10 +114,10 @@
             ClientSize = new Size(1302, 605);
             Controls.Add(calisan);
             Controls.Add(alis);
-            Controls.Add(barkod);
+            Controls.Add(urunOzellikleri);
             Controls.Add(departman);
             Controls.Add(satis);
-            Controls.Add(atolye);
+            Controls.Add(tedarikci);
             Controls.Add(urun);
             Name = "AnaMenu";
             Text = "AnaMenu";
@@ -127,10 +127,10 @@
         #endregion
 
         private Button urun;
-        private Button atolye;
+        private Button tedarikci;
         private Button satis;
         private Button departman;
-        private Button barkod;
+        private Button urunOzellikleri;
         private Button alis;
         private Button calisan;
     }

@@ -15,7 +15,7 @@ namespace StokKontrolFormApp
 
         private void atolye_Click(object sender, EventArgs e)
         {
-            AtolyeForm atolyeForm = new AtolyeForm();
+            TedarikciForm atolyeForm = new TedarikciForm();
             atolyeForm.Show();
         }
 
@@ -33,7 +33,7 @@ namespace StokKontrolFormApp
 
         private void barkod_Click(object sender, EventArgs e)
         {
-            BarkodForm barkodForm = new BarkodForm();
+            UrunOzellikleriForm barkodForm = new UrunOzellikleriForm();
             barkodForm.Show();
         }
 

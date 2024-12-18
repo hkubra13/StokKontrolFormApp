@@ -30,7 +30,7 @@
         {
             satisCalisan_combo = new ComboBox();
             label6 = new Label();
-            satisUrun_combo = new ComboBox();
+            satisSeriNo_combo = new ComboBox();
             satisTarih_picker = new DateTimePicker();
             satisAra_btn = new Button();
             satisSil_btn = new Button();
@@ -65,13 +65,13 @@
             label6.TabIndex = 50;
             label6.Text = "Çalışan:";
             // 
-            // satisUrun_combo
+            // satisSeriNo_combo
             // 
-            satisUrun_combo.FormattingEnabled = true;
-            satisUrun_combo.Location = new Point(176, 298);
-            satisUrun_combo.Name = "satisUrun_combo";
-            satisUrun_combo.Size = new Size(151, 28);
-            satisUrun_combo.TabIndex = 49;
+            satisSeriNo_combo.FormattingEnabled = true;
+            satisSeriNo_combo.Location = new Point(176, 298);
+            satisSeriNo_combo.Name = "satisSeriNo_combo";
+            satisSeriNo_combo.Size = new Size(151, 28);
+            satisSeriNo_combo.TabIndex = 49;
             // 
             // satisTarih_picker
             // 
@@ -88,6 +88,7 @@
             satisAra_btn.TabIndex = 47;
             satisAra_btn.Text = "Ara";
             satisAra_btn.UseVisualStyleBackColor = true;
+            satisAra_btn.Click += satisAra_btn_Click;
             // 
             // satisSil_btn
             // 
@@ -97,6 +98,7 @@
             satisSil_btn.TabIndex = 46;
             satisSil_btn.Text = "Sil";
             satisSil_btn.UseVisualStyleBackColor = true;
+            satisSil_btn.Click += satisSil_btn_Click;
             // 
             // satisGuncelle_btn
             // 
@@ -106,6 +108,7 @@
             satisGuncelle_btn.TabIndex = 45;
             satisGuncelle_btn.Text = "Güncelle";
             satisGuncelle_btn.UseVisualStyleBackColor = true;
+            satisGuncelle_btn.Click += satisGuncelle_btn_Click;
             // 
             // satisEkle_btn
             // 
@@ -115,6 +118,7 @@
             satisEkle_btn.TabIndex = 44;
             satisEkle_btn.Text = "Ekle";
             satisEkle_btn.UseVisualStyleBackColor = true;
+            satisEkle_btn.Click += satisEkle_btn_Click;
             // 
             // satisDataGrid
             // 
@@ -128,11 +132,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(127, 301);
+            label5.Location = new Point(111, 301);
             label5.Name = "label5";
-            label5.Size = new Size(43, 20);
+            label5.Size = new Size(61, 20);
             label5.TabIndex = 42;
-            label5.Text = "Ürün:";
+            label5.Text = "Seri No:";
             // 
             // label4
             // 
@@ -198,7 +202,7 @@
             ClientSize = new Size(1024, 578);
             Controls.Add(satisCalisan_combo);
             Controls.Add(label6);
-            Controls.Add(satisUrun_combo);
+            Controls.Add(satisSeriNo_combo);
             Controls.Add(satisTarih_picker);
             Controls.Add(satisAra_btn);
             Controls.Add(satisSil_btn);
@@ -224,7 +228,7 @@
 
         private ComboBox satisCalisan_combo;
         private Label label6;
-        private ComboBox satisUrun_combo;
+        private ComboBox satisSeriNo_combo;
         private DateTimePicker satisTarih_picker;
         private Button satisAra_btn;
         private Button satisSil_btn;
